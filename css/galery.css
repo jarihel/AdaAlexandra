@@ -1,0 +1,208 @@
+/*///////////////////////////////////////////////////////////////////////////////*/
+/*////CONFIGURACION DEL TAMAÑO Y LUGAR DONDE SE FIJAN LAS IMAGENES///////////////*/
+/*///////////////////////////////////////////////////////////////////////////////*/
+:root {
+  --box-width: 30%;               /***/   --box-heigth:70%;        
+  /********* box-1 BEFORE *************************** box-1 AFTER ****************/
+  --box-1-y: 100px;                 /***/   --box-1b-y:-100px;               /***/  
+  --box-1-x: 50px;                  /***/   --box-1b-x:-5%;                   /***/  
+  --box-1-rotate: rotate(20deg);    /***/   --box-1b-rotate: rotate(0deg);    /***/ 
+  --box-1-z: 1;                     /***/   --box-1b-z: 0;                    /***/ 
+  --box-1-zoom: 1;                  /***/   --box-1b-zoom: 1;                 /***/
+  /********* box-2 BEFORE *************************** box-2 AFTER ****************/
+  --box-2-y: 150px;                 /***/   --box-2b-y: -80px;                 /***/ 
+  --box-2-x: 150px;                  /***/   --box-2b-x: 35%;                  /***/ 
+  --box-2-rotate: rotate(30deg);    /***/   --box-2b-rotate: rotate(0deg);    /***/   
+  --box-2-z: 2;                     /***/   --box-2b-z: 0;                    /***/ 
+  --box-2-zoom: 1;                  /***/   --box-2b-zoom: 1;                 /***/ 
+  /********* box-3 BEFORE *************************** box-3 AFTER ****************/
+  --box-3-y: 50px;                 /***/   --box-3b-y: -100px;                /***/
+  --box-3-x:400px;                 /***/   --box-3b-x: 75%;                  /***/
+  --box-3-rotate: rotate(10deg);    /***/   --box-3b-rotate: rotate(0deg);    /***/
+  --box-3-z: 3;                     /***/   --box-3b-z: 0;                    /***/
+  --box-3-zoom: 1;                  /***/   --box-3b-zoom: 1;                 /***/
+  /********* box-4 BEFORE *************************** box-4 AFTER ****************/
+  --box-4-y: 190px;                 /***/   --box-4b-y: 200px;                /***/
+  --box-4-x:  550px;                /***/   --box-4b-x: -5%;                   /***/
+  --box-4-rotate: rotate(50deg);    /***/   --box-4b-rotate: rotate(0deg);    /***/
+  --box-4-z: 4;                     /***/   --box-4b-z: 0;                    /***/
+  --box-4-zoom: 1;                  /***/   --box-4b-zoom: 1;                 /***/
+  /********* box-5 BEFORE *************************** box-5 AFTER ****************/
+  --box-5-y: 0px;                  /***/   --box-5b-y: 180px;                /***/
+  --box-5-x: 200px;                 /***/   --box-5b-x: 35%;                   /***/
+  --box-5-rotate: rotate(-60deg);   /***/   --box-5b-rotate: rotate(0deg);    /***/
+  --box-5-z: 5;                     /***/   --box-5b-z: 0;                    /***/
+  --box-5-zoom: 1;                  /***/   --box-5b-zoom: 1;                 /***/
+  /********* box-6 BEFORE *************************** box-6 AFTER ****************/
+  --box-6-y: 150px;                 /***/   --box-6b-y: 200px;                /***/
+  --box-6-x: 367px;                 /***/   --box-6b-x: 75%;                   /***/ 
+  --box-6-rotate: rotate(-10deg);   /***/   --box-6b-rotate: rotate(0deg);    /***/
+  --box-6-z: 6;                     /***/   --box-6b-z: 0;                    /***/
+  --box-6-zoom: 1;                  /***/   --box-6b-zoom: 1;                 /***/ 
+  /****************************************IMAGENES DE FONDO**********************/
+  --box-1-image: url("../img/cat1.jpg");                                      /***/ 
+  --box-2-image: url("../img/cat2.jpg");                                      /***/     
+  --box-3-image: url("../img/cat3.jpg");                                      /***/   
+  --box-4-image: url("../img/cat4.jpg");                                      /***/ 
+  --box-5-image: url("../img/cat5.jpg");                                      /***/    
+  --box-6-image: url("../img/cat6.jpg");                                      /***/ 
+/*********************************************************************************/
+}
+/*///////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////CODIGO///////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////////*/
+.img{
+  width: 100%;
+  height: 100%;
+}
+.wraper {
+  height: 726px;
+}
+.img-area {
+  position: relative;
+  top: 200px;
+  left: 10%;
+  width: 80%;
+  height: 50%;
+  z-index:999;
+}
+.img-box {
+  position: absolute;
+  padding: 10px 10px 10px; 
+  height: var(--box-heigth);
+  width: var(--box-width);
+  box-shadow: 0 0 5px 0 #333;
+  border: 1px solid #333;
+  transition: 1.5s;
+  font-size: 30px;
+  background-size: cover;  
+  font-family: "Chelsea Market", cursive;
+  overflow: visible;
+  border-radius: 5px;  
+}
+.box-1 {
+  position: absolute;
+  top: var(--box-1-y);
+  left: var(--box-1-x);
+  width: var(--box-width);
+  z-index: var(--box-1-z);
+  transform: var(--box-1-rotate);
+  zoom: var(--box-1-zoom);
+}
+.box-1b {
+  position: absolute;
+  top:var(--box-1b-y);
+  left: var(--box-1b-x);
+  width: var(--box-width);
+  z-index: var(--box-1b-z);
+  transform: var(--box-1b-y);
+  zoom: var(--box-1b-zoom);
+}
+#box-1 {
+  background-image: var(--box-1-image);
+}
+.box-2 {
+  position: absolute;
+  top: var(--box-2-y);
+  left: var(--box-2-x);
+  width: var(--box-width);
+  z-index: var(--box-2-z);
+  transform: var(--box-2-rotate);
+  zoom: var(--box-2-zoom);
+}
+.box-2b {
+  position: absolute;
+  top:var(--box-2b-y);
+  left: var(--box-2b-x);
+  width: var(--box-width);
+  z-index: var(--box-2b-z);
+  transform: var(--box-2b-y);
+  zoom: var(--box-2b-zoom);
+}
+#box-2 {
+  background-image: var(--box-2-image);
+}
+.box-3 {
+  position: absolute;
+  top: var(--box-3-y);
+  left: var(--box-3-x);
+  width: var(--box-width);
+  z-index: var(--box-3-z);
+  transform: var(--box-3-rotate);
+  zoom: var(--box-3-zoom);
+}
+.box-3b {
+  position: absolute;
+  top:var(--box-3b-y);
+  left: var(--box-3b-x);
+  width: var(--box-width);
+  z-index: var(--box-3b-z);
+  transform: var(--box-3b-y);
+  zoom: var(--box-3b-zoom);
+}
+#box-3 {
+  background-image: var(--box-3-image);
+}
+.box-4 {
+  position: absolute;
+  top: var(--box-4-y);
+  left: var(--box-4-x);
+  width: var(--box-width);
+  z-index: var(--box-4-z);
+  transform: var(--box-4-rotate);
+  zoom: var(--box-4-zoom);
+}
+.box-4b {
+  position: absolute;
+  top:var(--box-4b-y);
+  left: var(--box-4b-x);
+  width: var(--box-width);
+  z-index: var(--box-4b-z);
+  transform: var(--box-4b-y);
+  zoom: var(--box-4b-zoom);
+}
+#box-4 {
+  background-image: var(--box-4-image);
+}
+.box-5 {
+  position: absolute;
+  top: var(--box-5-y);
+  left: var(--box-5-x);
+  width: var(--box-width);
+  z-index: var(--box-5-z);
+  transform: var(--box-5-rotate);
+  zoom: var(--box-5-zoom);
+}
+.box-5b {
+  position: absolute;
+  top:var(--box-5b-y);
+  left: var(--box-5b-x);
+  width: var(--box-width);
+  z-index: var(--box-5b-z);
+  transform: var(--box-5b-y);
+  zoom: var(--box-5b-zoom);
+}
+#box-5 {
+  background-image: var(--box-5-image);
+}
+.box-6 {
+  position: absolute;
+  top: var(--box-6-y);
+  left: var(--box-6-x);
+  width: var(--box-width);
+  z-index: var(--box-6-z);
+  transform: var(--box-6-rotate);
+  zoom: var(--box-6-zoom);
+}
+.box-6b {
+  position: absolute;
+  top: var(--box-6b-y);
+  left: var(--box-6b-x);
+  width: var(--box-width);
+  z-index: var(--box-6b-z);
+  transform: var(--box-6b-rotate);
+  zoom: var(--box-6b-zoom);
+}
+#box-6 {
+  background-image: var(--box-6-image);
+}

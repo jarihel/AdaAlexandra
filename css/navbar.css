@@ -1,0 +1,193 @@
+
+/*//////////////////// FONDOS /////////////////////////////*/
+@media screen and (min-width: 800px) {
+  .body {
+  
+    background-size: cover;
+    animation-direction: alternate;
+    animation: 18s infinite fondo;
+    /*   transition: fondo 2s ease-out; */
+  }
+  @keyframes fondo {
+    0%,
+    16% {
+      background-image: url(../img/fondo1.jpg);
+    }
+    20%,
+    36% {
+      background-image: url(../img/fondo2.jpg);
+    }
+    40%,
+    56% {
+      background-image: url(../img/fondo3.jpg);
+      opacity: 1;
+    }
+    60%,
+    76% {
+      background-image: url(../img/fondo4.jpg);
+      opacity: 1;
+    }
+    80%,
+    100% {
+      background-image: url(../img/fondo5.jpg);
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+.body {
+    background-image: url("../img/fondo-mobil.jpg");
+    background-size: cover;
+  }
+}
+/*////////////////////  /////////////////////////////*/
+.none {
+  visibility: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 8;
+  padding: 0;
+}
+.navbar {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 10%;
+  background-color: rgba(167, 163, 154, 0.609);
+}
+.transp {
+  background-color: rgba(169, 138, 0, 0);
+}
+
+.navbar:hover {
+  background-color: rgba(169, 138, 0, 0);
+}
+
+.logo {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+.logo-movil {
+    top: 20px;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Chelsea Market", cursive;
+  font-weight: 500;
+  color: #242115;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 50px;
+}
+
+.nav__links li a {
+  transition: 2s ease 2s;
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: black;
+}
+
+.cta {
+  padding: 9px 25px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgb(169, 130, 0);
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(167, 163, 154, 0.609);
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: black
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+}
+
+@media screen and (max-height: 400px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+  }
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+.pointer {
+  cursor: pointer;
+}
